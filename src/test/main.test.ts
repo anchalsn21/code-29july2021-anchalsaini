@@ -62,7 +62,7 @@ describe("Calculate Function testing", () => {
 });
 
 /**
- * @description - Unit testing of Api's
+ * @description - Unit testing of Api End points
  */
 
 it("Gets all bmi data", async () => {

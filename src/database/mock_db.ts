@@ -9,6 +9,10 @@ const data: Tuser[] = [
   { Gender: "Female", HeightCm: 167, WeightKg: 82 },
 ];
 
+/**
+ * @description - This function is used to fetch all the User mock data and simulate the DB find query
+ */
+
 const fetchAllData = (): Tuser[] => {
   return data;
 };

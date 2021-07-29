@@ -6,6 +6,10 @@ import {
 } from "../utils/calculate";
 import { Tuser } from "../types/types";
 
+/**
+ * @description - This function is used for Updating the user object and add bmi , category and health risk category in the user object
+ */
+
 const setDataToObject = (obj: Tuser): Tuser => {
   let bmi = calculateBmi(obj.WeightKg, obj.HeightCm);
   let category = getCategoryByBmi(bmi);
@@ -16,13 +20,21 @@ const setDataToObject = (obj: Tuser): Tuser => {
   return obj;
 };
 
-const updateBmiData = (allData: Tuser[]) => {
+/**
+ * @description - This function is used for looping through the user data and calling the setDataToObject function on user Object
+ */
+
+const updateBmiData = (allData: Tuser[]): Tuser[] => {
   for (let user of allData) {
     setDataToObject(user);
   }
 
   return allData;
 };
+
+/**
+ * @description - This function returns the Bmi data in paginated manner
+ */
 
 const getAllBmiDetailsService = (page: number) => {
   // @TODO -- Implement Pagination for large Data set
@@ -40,6 +52,10 @@ const getAllBmiDetailsService = (page: number) => {
     currentPage,
   };
 };
+
+/**
+ * @description - This function is for getting count of people belonging to a specific category
+ */
 
 const getCategoryCount = (searchCriteria: string) => {
   let userData: Tuser[] = fetchAllData();

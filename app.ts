@@ -13,7 +13,7 @@ const app: Application = express();
 })();
 
 /**
- * @description - It handles the uncaught rejections
+ * @description - Below handles the uncaught rejections
  */
 
 process.on("uncaughtException", (err: Error) => {
