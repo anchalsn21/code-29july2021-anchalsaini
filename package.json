@@ -1,0 +1,40 @@
+{
+  "name": "coding-challenge",
+  "version": "1.0.0",
+  "description": "Challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "ts-node-dev server.ts",
+    "test:jest": "set NODE_ENV=test && jest --runInBand --detectOpenHandles",
+    "test": "set NODE_ENV=test && jest --runInBand --detectOpenHandles --watchAll --no-cache"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/main.test.ts"
+    ]
+  },
+  "keywords": [
+    "challenge"
+  ],
+  "author": "Anchal Saini",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.8",
+    "@types/jest": "^26.0.24",
+    "@types/supertest": "^2.0.11",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4",
+    "ts-jest": "^27.0.4"
+  }
+}
