@@ -9,6 +9,8 @@ Steps to Run
 Api end Point to view all the records (Paginated) - http://localhost:3010/bmi
 
 Api end Point to view the count of Overweight people http:/localhost:3010/Overweight
+You can go to Home route http://localhost:3010 which will contain details of other end point as well
+Api end Point: http://localhost:3010
 
 ** .env file is also included
 
